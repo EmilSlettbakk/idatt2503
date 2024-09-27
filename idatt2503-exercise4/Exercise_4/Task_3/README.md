@@ -1,0 +1,6 @@
+## What happens when only the library is recompiled?
+When only a library is recompiled, the resulting binary for the library gets updated, but the main program’s binary remains unchanged. This allows the behavior of the library to be modified without requiring any changes to the program that relies on it. Essentially, you can alter how the program operates without needing access to its source code.
+
+This is one of the advantages of using a dynamically linked library: library developers can make updates to their code without requiring users of the library to recompile their programs. Users can simply download or compile the new version of the library, and the program should continue to function as expected.
+
+However, there’s a potential risk involved. A malicious actor could replace the library binary with their own version. When the victim runs the program, it will unknowingly execute the attacker’s code instead of the intended library functions. This is a key factor to consider when deciding between dynamic and static linking of libraries.
